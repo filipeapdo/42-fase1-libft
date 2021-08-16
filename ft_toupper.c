@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/15 20:37:14 by fiaparec          #+#    #+#             */
-/*   Updated: 2021/08/15 23:55:10 by fiaparec         ###   ########.fr       */
+/*   Created: 2021/08/16 00:10:36 by fiaparec          #+#    #+#             */
+/*   Updated: 2021/08/16 00:15:23 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int	ft_toupper(int c)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
-		return (1);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
 	else
-		return (0);
+		return (c);
 }

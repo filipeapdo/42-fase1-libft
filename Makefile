@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/08/15 22:54:20 by fiaparec          #+#    #+#              #
+#    Updated: 2021/08/15 22:54:27 by fiaparec         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC				= clang
 
 FLAG			= -Wall -Wextra -Werror
@@ -47,6 +59,5 @@ $(TNAME):		$(TOBJS)
 				$(CC) $(FLAG) $(TSRCS) $(LIB_FLAG) -o $(TNAME)
 
 test:			$(TNAME)
-				
 
 .PHONY:			all clean fclean re test

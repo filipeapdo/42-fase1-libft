@@ -1,4 +1,7 @@
 docs/*
-minunit.h
 flp*
 test*
+*.a
+*.o
+*.out
+minunit.h

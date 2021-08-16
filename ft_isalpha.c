@@ -6,7 +6,7 @@
 /*   By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/08 12:26:06 by fiaparec          #+#    #+#             */
-/*   Updated: 2021/08/15 11:10:23 by fiaparec         ###   ########.fr       */
+/*   Updated: 2021/08/15 23:54:21 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 
 int	ft_isalpha(int c)
 {
-	unsigned char	uc;
-
-	uc = (unsigned char) c;
-	if ((uc >= 'A' && uc <= 'Z') || (uc >= 'a' && uc <= 'z'))
-		return (uc);
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
 	else
 		return (0);
 }
