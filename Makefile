@@ -6,7 +6,7 @@
 #    By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/15 22:54:20 by fiaparec          #+#    #+#              #
-#    Updated: 2021/08/15 22:54:27 by fiaparec         ###   ########.fr        #
+#    Updated: 2021/08/16 22:34:39 by fiaparec         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,4 +60,4 @@ $(TNAME):		$(TOBJS)
 
 test:			$(TNAME)
 
-.PHONY:			all clean fclean re test
+.PHONY:			all clean fclean re norm test
