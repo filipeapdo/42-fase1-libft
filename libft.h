@@ -6,7 +6,7 @@
 /*   By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 11:04:23 by fiaparec          #+#    #+#             */
-/*   Updated: 2021/09/08 22:24:51 by fiaparec         ###   ########.fr       */
+/*   Updated: 2021/09/09 08:40:09 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 
 #endif
