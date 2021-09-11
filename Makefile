@@ -6,7 +6,7 @@
 #    By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/15 22:54:20 by fiaparec          #+#    #+#              #
-#    Updated: 2021/08/16 22:34:39 by fiaparec         ###   ########.fr        #
+#    Updated: 2021/09/11 10:19:22 by fiaparec         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,7 @@ fclean:			clean
 				$(RM) $(NAME)
 				$(RM) $(TNAME)
 				$(RM) *.out
+				$(RM) *.a
 
 re:				fclean all
 

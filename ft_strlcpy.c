@@ -6,7 +6,7 @@
 /*   By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:09:51 by fiaparec          #+#    #+#             */
-/*   Updated: 2021/08/16 20:59:17 by fiaparec         ###   ########.fr       */
+/*   Updated: 2021/09/11 08:10:34 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,17 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int	i;
-	size_t			len_src;
+	int	i;
 
-	len_src = ft_strlen(src);
 	i = 0;
 	if (dstsize > 0)
 	{
-		while (*(src + i) != '\0' && i < (dstsize - 1))
+		while (*(src + i) && dstsize-- > 1)
 		{
 			*(dst + i) = *(src + i);
 			i++;
 		}
 		*(dst + i) = '\0';
 	}
-	return (len_src);
+	return (ft_strlen(src));
 }
