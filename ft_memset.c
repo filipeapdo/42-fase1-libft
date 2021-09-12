@@ -6,7 +6,7 @@
 /*   By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 22:07:17 by fiaparec          #+#    #+#             */
-/*   Updated: 2021/09/10 06:54:53 by fiaparec         ###   ########.fr       */
+/*   Updated: 2021/09/12 10:40:46 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	while (n--)
-		*((char *)s + n) = c;
+		*((unsigned char *)s + n) = c;
 	return (s);
 }

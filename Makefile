@@ -6,7 +6,7 @@
 #    By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/15 22:54:20 by fiaparec          #+#    #+#              #
-#    Updated: 2021/09/11 10:19:22 by fiaparec         ###   ########.fr        #
+#    Updated: 2021/09/11 16:25:35 by fiaparec         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,15 +50,20 @@ fclean:			clean
 				$(RM) $(TNAME)
 				$(RM) *.out
 				$(RM) *.a
+				$(RM) *.so
 
 re:				fclean all
 
 norm:
 				$(NORM) $(HEADERS) $(SRCS)
 
+so:
+				$(CC) -nostartfiles -fPIC $(FLAG) $(SRCS)
+				gcc -shared -o libft.so $(OBJS)
+
 $(TNAME):		$(TOBJS)
 				$(CC) $(FLAG) $(TSRCS) $(LIB_FLAG) -o $(TNAME)
 
 test:			$(TNAME)
 
-.PHONY:			all clean fclean re norm test
+.PHONY:			all clean fclean re norm so test

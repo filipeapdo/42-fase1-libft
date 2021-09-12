@@ -6,7 +6,7 @@
 /*   By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 20:37:14 by fiaparec          #+#    #+#             */
-/*   Updated: 2021/08/15 23:55:10 by fiaparec         ###   ########.fr       */
+/*   Updated: 2021/09/12 08:28:12 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
+	if (ft_isascii(c) && (ft_isalpha(c) || ft_isdigit(c)))
 		return (1);
-	else
-		return (0);
+	return (0);
 }

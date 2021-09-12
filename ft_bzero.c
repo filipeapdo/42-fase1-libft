@@ -6,7 +6,7 @@
 /*   By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 21:50:33 by fiaparec          #+#    #+#             */
-/*   Updated: 2021/09/10 06:55:46 by fiaparec         ###   ########.fr       */
+/*   Updated: 2021/09/12 10:33:24 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	while (n--)
-		*((char *)s + n) = 0;
+	ft_memset(s, 0, n);
 }

@@ -6,7 +6,7 @@
 /*   By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 22:19:10 by fiaparec          #+#    #+#             */
-/*   Updated: 2021/09/10 06:52:41 by fiaparec         ###   ########.fr       */
+/*   Updated: 2021/09/12 10:47:16 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
+	if ((!dest && !src) || !n)
+		return (dest);
 	while (n--)
-		*((char *)dest + n) = *((char *)src + n);
+		*((unsigned char *)dest + n) = *((unsigned char *)src + n);
 	return (dest);
 }

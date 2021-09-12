@@ -6,7 +6,7 @@
 /*   By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 23:18:28 by fiaparec          #+#    #+#             */
-/*   Updated: 2021/08/15 23:56:35 by fiaparec         ###   ########.fr       */
+/*   Updated: 2021/09/12 08:23:33 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
+	if (ft_isascii(c) && c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);
