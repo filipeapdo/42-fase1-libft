@@ -6,7 +6,7 @@
 /*   By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 11:04:23 by fiaparec          #+#    #+#             */
-/*   Updated: 2021/09/12 19:15:16 by fiaparec         ###   ########.fr       */
+/*   Updated: 2021/09/12 19:27:58 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strdup(const char *s);
+char	*ft_itoa(int n);
 
 // fd functions
 void	ft_putchar_fd(char c, int fd);
