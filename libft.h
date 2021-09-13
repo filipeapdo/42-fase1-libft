@@ -6,7 +6,7 @@
 /*   By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 11:04:23 by fiaparec          #+#    #+#             */
-/*   Updated: 2021/09/12 19:27:58 by fiaparec         ###   ########.fr       */
+/*   Updated: 2021/09/12 20:52:51 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ char	*ft_itoa(int n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 // mem functions
 void	ft_bzero(void *s, size_t n);

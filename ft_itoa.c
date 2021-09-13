@@ -6,7 +6,7 @@
 /*   By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 19:26:50 by fiaparec          #+#    #+#             */
-/*   Updated: 2021/09/12 20:34:18 by fiaparec         ###   ########.fr       */
+/*   Updated: 2021/09/12 21:14:08 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,14 @@ char	*ft_itoa(int n)
 		return (nptr);
 	if (n < 0)
 	{
-		*nptr = '-';
+		nptr[0] = '-';
 		n *= -1;
 	}
 	*(nptr + len) = '\0';
 	while (n > 0)
 	{
 		len--;
-		*(nptr + len) = n % 10 + '0';
+		nptr[len] = n % 10 + '0';
 		n /= 10;
 	}
 	return (nptr);
