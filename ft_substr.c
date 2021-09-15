@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/12 13:15:24 by fiaparec          #+#    #+#             */
-/*   Updated: 2021/09/13 21:20:05 by fiaparec         ###   ########.fr       */
+/*   Created: 2021/09/13 19:54:18 by fiaparec          #+#    #+#             */
+/*   Updated: 2021/09/14 20:51:32 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	int		s_sub_len;
+	char	*s_sub;
 	int		i;
-	char	*s_dup;
 
 	if (!s)
 		return (NULL);
+	if (start > ft_strlen(s) || (start == 0 && len == 0))
+		return (ft_strdup(""));
+	else if (len > ft_strlen(s))
+		s_sub_len = ft_strlen(s) - start;
+	else if (start == len)
+		s_sub_len = len - start + 1;
+	else
+		s_sub_len = len - start;
 	i = 0;
-	s_dup = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (!s_dup)
+	s_sub = (char *)malloc(sizeof(char) * s_sub_len + 1);
+	if (!s_sub)
 		return (NULL);
-	ft_strlcpy(s_dup, s, ft_strlen(s) + 1);
-	return (s_dup);
+	ft_strlcpy(s_sub, s + start, s_sub_len + 1);
+	return (s_sub);
 }

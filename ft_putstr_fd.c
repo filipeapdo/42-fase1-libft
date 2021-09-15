@@ -6,7 +6,7 @@
 /*   By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 19:08:47 by fiaparec          #+#    #+#             */
-/*   Updated: 2021/09/12 19:19:53 by fiaparec         ###   ########.fr       */
+/*   Updated: 2021/09/12 22:39:56 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while(*s)
+	while (*s)
 	{
 		ft_putchar_fd(*s, fd);
 		s++;
