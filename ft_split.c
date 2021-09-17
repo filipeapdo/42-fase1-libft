@@ -6,7 +6,7 @@
 /*   By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 21:31:09 by fiaparec          #+#    #+#             */
-/*   Updated: 2021/09/17 00:31:04 by fiaparec         ###   ########.fr       */
+/*   Updated: 2021/09/17 07:22:58 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,21 +36,21 @@ static int	flp_cnt_words(char const *s, char c)
 static void	flp_split_words(char **arr_split, char const *s, char c)
 {
 	int		i;
-	int		word_start;
+	int		word_st;
 	int		word_len;
 
 	i = 0;
-	word_start = 0;
+	word_st = 0;
 	word_len = 0;
 	while (*(s + word_len))
 	{
 		while (*(s + word_len) == c)
 			word_len++;
-		word_start = word_len;
+		word_st = word_len;
 		while (*(s + word_len) != c && *(s + word_len) != '\0')
 			word_len++;
-		if (word_len > word_start)
-			*(arr_split + i++) = ft_substr(s, word_start, word_len);
+		if (word_len > word_st)
+			*(arr_split + i++) = ft_substr(s, word_st, (word_len - word_st));
 	}
 	*(arr_split + i) = NULL;
 }

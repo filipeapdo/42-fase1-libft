@@ -6,15 +6,12 @@
 #    By: fiaparec <fiaparec@student.42sp.org.b      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/15 22:54:20 by fiaparec          #+#    #+#              #
-#    Updated: 2021/09/16 07:21:42 by fiaparec         ###   ########.fr        #
+#    Updated: 2021/09/17 08:02:22 by fiaparec         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC				= clang
-
 FLAG			= -Wall -Wextra -Werror
-
-LIB_FLAG		= -L. -lft
 
 AR				= ar rc
 
@@ -22,16 +19,19 @@ RM				= rm -f
 
 NORM			= norminette
 
+NAME			= libft.a
 HEADERS			= libft.h
-
-SRCS			:= $(wildcard ft_*.c)
-TSRCS			:= $(wildcard test_*.c)
+SRCS			= ft_isascii.c ft_isprint.c ft_isalpha.c ft_isdigit.c ft_isalnum.c \
+				  ft_toupper.c ft_tolower.c \
+				  ft_atoi.c ft_strlen.c ft_strncmp.c ft_strchr.c ft_strrchr.c \
+				  ft_strnstr.c ft_strlcpy.c ft_strlcat.c \
+				  ft_itoa.c ft_strdup.c ft_substr.c ft_strtrim.c \
+				  ft_strjoin.c ft_split.c ft_strmapi.c ft_striteri.c \
+				  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+				  ft_bzero.c ft_memset.c ft_memcpy.c ft_memmove.c \
+				  ft_memcmp.c ft_memchr.c ft_calloc.c
 
 OBJS			= $(SRCS:.c=.o)
-TOBJS			= $(TSRCS:.c=.o)
-
-NAME			= libft.a
-TNAME			= test_libft
 
 .c.o:
 				$(CC) $(FLAG) -c $< -o $(<:.c=.o)
@@ -43,27 +43,15 @@ all:			$(NAME)
 
 clean:
 				$(RM) $(OBJS)
-				$(RM) $(TOBJS)
 
 fclean:			clean
 				$(RM) $(NAME)
-				$(RM) $(TNAME)
 				$(RM) *.out
 				$(RM) *.a
-				$(RM) *.so
 
 re:				fclean all
 
 norm:
 				$(NORM) $(HEADERS) $(SRCS)
 
-so:
-				$(CC) -nostartfiles -fPIC $(FLAG) $(SRCS)
-				gcc -shared -o libft.so $(OBJS)
-
-$(TNAME):		$(TOBJS)
-				$(CC) $(FLAG) $(TSRCS) $(LIB_FLAG) -o $(TNAME)
-
-test:			$(TNAME)
-
-.PHONY:			all clean fclean re norm so test
+.PHONY:			all clean fclean re norm
