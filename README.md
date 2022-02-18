@@ -24,7 +24,7 @@ TBD
 
 ## After delivery (to-do)
 - [x] rearrange directory tree
-- [ ] redo Makefile with more clean look'nfeel
+- [x] redo Makefile with more clean look'nfeel
 - [ ] create more functions such as: ft_isspace, ft_issgnal, etc...
 - [ ] create validation functions such as: limits.h (maybe into ../libft.h)
 - [ ] refactor functions such as: ft_strrchr (can be done backwards instead), str{nstr, lcpy, lcat} (can be done w/o explicit pointer operations)
@@ -32,7 +32,7 @@ TBD
 - [ ] refactor oppurtunity: maybe it's possible to use ft_str{iteri, mapi} on Pt1 functions
 - [ ] review all Part 2 when possible
 - [ ] rafactor strncmp, revising the rest of: (n-- < 0)
-- [ ] unit tests (using ../minunit.h):
+- [ ] unit tests (using minunit.h):
   - [x] ft_isalnum
   - [x] ft_isalpha
   - [x] ft_isascii
@@ -156,61 +156,3 @@ Premisses adopted for "str functions":
 - [x] void	ft_striteri(char \*s, void (\*f)(unsigned int, char*))
 ---
 <br />
-
-```
-libft
-├─ Makefile
-├─ README.md
-├─ src
-│  ├─ char
-│  │  ├─ ft_isalnum.c
-│  │  ├─ ft_isalnum_test.c
-│  │  ├─ ft_isalpha.c
-│  │  ├─ ft_isalpha_test.c
-│  │  ├─ ft_isascii.c
-│  │  ├─ ft_isascii_test.c
-│  │  ├─ ft_isdigit.c
-│  │  ├─ ft_isdigit_test.c
-│  │  ├─ ft_isprint.c
-│  │  ├─ ft_isprint_test.c
-│  │  ├─ ft_tolower.c
-│  │  ├─ ft_tolower_test.c
-│  │  ├─ ft_toupper.c
-│  │  └─ ft_toupper_test.c
-│  ├─ fd
-│  │  ├─ ft_putchar_fd.c
-│  │  ├─ ft_putendl_fd.c
-│  │  ├─ ft_putnbr_fd.c
-│  │  └─ ft_putstr_fd.c
-│  ├─ ../libft.h
-│  ├─ libft_test.h
-│  ├─ main_test.c
-│  ├─ mem
-│  │  ├─ ft_bzero.c
-│  │  ├─ ft_calloc.c
-│  │  ├─ ft_memchr.c
-│  │  ├─ ft_memcmp.c
-│  │  ├─ ft_memcpy.c
-│  │  ├─ ft_memmove.c
-│  │  └─ ft_memset.c
-│  ├─ ../minunit.h
-│  └─ str
-│     ├─ ft_atoi.c
-│     ├─ ft_itoa.c
-│     ├─ ft_split.c
-│     ├─ ft_strchr.c
-│     ├─ ft_strdup.c
-│     ├─ ft_striteri.c
-│     ├─ ft_strjoin.c
-│     ├─ ft_strlcat.c
-│     ├─ ft_strlcpy.c
-│     ├─ ft_strlen.c
-│     ├─ ft_strmapi.c
-│     ├─ ft_strncmp.c
-│     ├─ ft_strnstr.c
-│     ├─ ft_strrchr.c
-│     ├─ ft_strtrim.c
-│     └─ ft_substr.c
-└─ test_Makefile
-
-```
