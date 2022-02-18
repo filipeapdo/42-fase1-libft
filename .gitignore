@@ -1,8 +1,6 @@
-docs
-test*
+docs/*subject*
 *.a
 *.so
 *.o
 *.out
-minunit.h
-todo.md
+test_Makefile
