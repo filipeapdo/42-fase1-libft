@@ -1,37 +1,54 @@
+#include <ctype.h>
+#include "../minunit.h"
 #include "../libft_test.h"
 #include "../libft.h"
-#include "../minunit.h"
-#include <limits.h>
 
-static int	ts0 = 0;
-static int	ts1 = 0;
-static int	ts2 = 0;
-static int	ts3 = 0;
-static int	ts4 = 0;
-static int	ts5 = 0;
+int	expect_ts0 = 0;
+int	result_ts0 = 0;
+int	expect_ts1 = 0;
+int	result_ts1 = 0;
+int	expect_ts2 = 0;
+int	result_ts2 = 0;
+int	expect_ts3 = 0;
+int	result_ts3 = 0;
+int	expect_ts4 = 0;
+int	result_ts4 = 0;
+int	expect_ts5 = 0;
+int	result_ts5 = 0;
 
-static int	tf0 = 0;
-static int	tf1 = 0;
-static int	tf2 = 0;
+int	tf0 = 0;
+int	tf1 = 0;
+int	tf2 = 0;
 
-static int	tl_max = 0;
-static int	tl_min = 0;
+int	tl_max = 0;
+int	tl_min = 0;
 
-static int	tc0 = 0;
-static int	tc1 = 0;
-static int	tc2 = 0;
-static int	tc3 = 0;
+int	tc0 = 0;
+int	tc1 = 0;
+int	tc2 = 0;
+int	tc3 = 0;
 
 static void	tests_setup(void)
 {
 
 	// test to success
-	ts0 = ft_isalnum('A');
-	ts1 = ft_isalnum('Z');
-	ts2 = ft_isalnum('a');
-	ts3 = ft_isalnum('z');
-	ts4 = ft_isalnum('0');
-	ts5 = ft_isalnum('9');
+	expect_ts0 = isalnum('A');
+	result_ts0 = ft_isalnum('A');
+
+	expect_ts1 = isalnum('Z');
+	result_ts1 = ft_isalnum('Z');
+
+	expect_ts2 = isalnum(':');
+	result_ts2 = ft_isalnum('a');
+
+	result_ts3 = ft_isalnum('z');
+	expect_ts3 = isalnum('z');
+
+	result_ts4 = ft_isalnum('0');
+	expect_ts4 = isalnum('0');
+
+	result_ts5 = ft_isalnum('9');
+	expect_ts5 = isalnum('9');
 
 	// test to fail
 	tf0 = ft_isalnum('/');
@@ -51,32 +68,32 @@ static void	tests_setup(void)
 
 MU_TEST(test_success_isalnum_0)
 {
-	mu_check(ts0 != 0);
+	mu_check(expect_ts0 != 0 && result_ts0 != 0);
 }
 
 MU_TEST(test_success_isalnum_1)
 {
-	mu_check(ts1 != 0);
+	mu_check(expect_ts1 != 0 && result_ts1 != 0);
 }
 
 MU_TEST(test_success_isalnum_2)
 {
-	mu_check(ts2 != 0);
+	mu_check(expect_ts2 != 0 && result_ts2 != 0);
 }
 
 MU_TEST(test_success_isalnum_3)
 {
-	mu_check(ts3 != 0);
+	mu_check(expect_ts3 != 0 && result_ts3 != 0);
 }
 
 MU_TEST(test_success_isalnum_4)
 {
-	mu_check(ts4 != 0);
+	mu_check(expect_ts4 != 0 && result_ts4 != 0);
 }
 
 MU_TEST(test_success_isalnum_5)
 {
-	mu_check(ts5 != 0);
+	mu_check(expect_ts5 != 0 && result_ts5 != 0);
 }
 
 MU_TEST(test_fail_isalnum_0)

@@ -1,7 +1,7 @@
+#include <ctype.h>
+#include "../minunit.h"
 #include "../libft_test.h"
 #include "../libft.h"
-#include "../minunit.h"
-#include <limits.h>
 
 static int	ts0 = 0;
 static int	ts1 = 0;
