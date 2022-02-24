@@ -1,4 +1,4 @@
-docs/*subject*
+*subject.pdf
 *.a
 *.so
 *.o
