@@ -38,7 +38,7 @@ static void	tests_setup(void)
 	expect_ts1 = isalnum('Z');
 	result_ts1 = ft_isalnum('Z');
 
-	expect_ts2 = isalnum(':');
+	expect_ts2 = isalnum('a');
 	result_ts2 = ft_isalnum('a');
 
 	result_ts3 = ft_isalnum('z');

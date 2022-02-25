@@ -6,14 +6,14 @@
 #    By: fiaparec <fiaparec@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/15 22:54:20 by fiaparec          #+#    #+#              #
-#    Updated: 2022/02/17 20:56:21 by fiaparec         ###   ########.fr        #
+#    Updated: 2022/02/25 06:53:10 by fiaparec         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC				= gcc
 
 FLAG			= -Wall -Wextra -Werror
-LIB_FLAG		= -L. -lft
+LIB_FLAG		= -L. -l:libft.a
 
 AR				= ar rc
 

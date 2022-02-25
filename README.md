@@ -1,9 +1,29 @@
 # libft
 Very first project at 42 as Cadet.
-<br /><br />
+
+"libft" contains a set of recoded C functions. The idea is to increase it overtime so that it can be used in future 42 projects.
+<br />
 
 ## How to use
 **Be advised, this project is customized. If you decided to use it as reference, good! But do not use it as a "deliverable project"**  
+
+### Build and Clean Flows
+* To build libft, run: `make [all]`.
+* To keep the directory clean, run: `make clean`.
+* At this point, the lib file "libft.a" will be available to be linked. To link it, you may use gcc, e.g.: `gcc -Wall -Wextra -Werror test.c -L. -l:libft.a -o test.out`; where:
+	* "-L.", explicits tells the compiler the lib directory;
+	* "-l:libft.", explicits tells the compiler the lib name;
+	* see more option in: `man gcc`.
+* It's possible to run `make clean`, `make fclean` or `make re` to clean unused objects, clean all build artifacts and redo the build from top, respectively.
+
+### Unit Test Flow (WIP)
+* Using "minunit" test framework: https://github.com/siu/minunit.
+* Run: `make test && make clean && ./main_test.out`. The output will be similar to the following image.
+![running unit tests](assets/unitTestFlow_01.png "running unit tests")	
+* `[ft_isalnum]` : function's name that are being tested.
+* `..F` : each "dot" is an assertion, each "F" is a failed test.
+* `test_success_isalnum_2 failed (...)` : details of the failed test.
+* `15 tests, 15 assertions (...)` : summary of the test.
 
 ### Project structure
 TBD
@@ -25,6 +45,7 @@ TBD
 ## After delivery (to-do)
 - [x] rearrange directory tree
 - [x] redo Makefile with more clean look'nfeel
+- [ ] refactor unit tests to include c libs in the header file (libft_test.h)
 - [ ] create more functions such as: ft_isspace, ft_issgnal, etc...
 - [ ] create validation functions such as: limits.h (maybe into ../libft.h)
 - [ ] refactor functions such as: ft_strrchr (can be done backwards instead), str{nstr, lcpy, lcat} (can be done w/o explicit pointer operations)

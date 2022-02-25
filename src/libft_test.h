@@ -13,6 +13,8 @@
 #ifndef TEST_LIBFT_H
 # define TEST_LIBFT_H
 
+# include <limits.h>
+
 int	test_ft_isalpha(void);
 int	test_ft_isdigit(void);
 int	test_ft_isalnum(void);
