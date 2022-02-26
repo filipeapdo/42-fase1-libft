@@ -5,3 +5,4 @@
 *.out
 test_Makefile
 test.c
+main.c
